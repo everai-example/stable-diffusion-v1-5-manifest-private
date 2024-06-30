@@ -156,7 +156,7 @@ def img2img():
     return Response(byte_stream.getvalue(), mimetype="image/jpg")
 ```
 
-#### Generate readinessProbe service
+### Generate readinessProbe service
 
 If readinessProbe is set up, there are no any request be route to this worker before probe status is ready(status code is `200`), otherwise (readinessProbe is not set up), everai platform will route client reqeust to this worker when container is ready, even model files have not been loaded into memory of GPU yet. 
 
