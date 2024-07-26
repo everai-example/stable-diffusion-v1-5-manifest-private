@@ -70,11 +70,11 @@ spec:
             configMapKeyRef:
               name: sd15-configmap
               key: max_idle_time
-        max_queue_size:
+        min_free_workers:
           valueFrom:
             configMapKeyRef:
               name: sd15-configmap
-              key: max_queue_size
+              key: min_free_workers
         max_workers:
           valueFrom:
             configMapKeyRef:
