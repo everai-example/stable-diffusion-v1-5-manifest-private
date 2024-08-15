@@ -59,7 +59,7 @@ def prepare_model():
         img2img_pipe.to(mps_device)
 
 # service entrypoint
-# api service url looks https://everai.expvent.com/api/routes/v1/default/stable-diffusion-v1-5/txt2img
+# api service url looks https://everai.expvent.com/api/routes/v1/default/sd-v1-5-manifest-private/txt2img
 # for test local url is http://127.0.0.1:8866/txt2img
 @app.route('/txt2img', methods=['GET','POST'])
 def txt2img():    
@@ -79,7 +79,7 @@ def txt2img():
     return Response(byte_stream.getvalue(), mimetype="image/png")
 
 # service entrypoint
-# api service url looks https://everai.expvent.com/api/routes/v1/default/stable-diffusion-v1-5/img2img
+# api service url looks https://everai.expvent.com/api/routes/v1/default/sd-v1-5-manifest-private/img2img
 # for test local url is http://127.0.0.1:8866/img2img
 @app.route('/img2img', methods=['POST'])
 def img2img():        
